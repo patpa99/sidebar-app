@@ -1,0 +1,71 @@
+/* ---------------- To have the same Roboto font everywhere ------------------ */
+* {
+  font-family: 'Roboto', sans-serif;
+}
+
+#sidebar_hidden,
+#sidebar_visible {
+  width: 230px;
+  bottom: 0px;
+  top: 0px;
+  position: fixed;
+  z-index: 1;
+  background-color: #1a1a1a;
+  overflow-y: auto;
+
+  /* To remove the possibility to highlight text */
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+  color: white;
+  word-wrap: break-word;
+  border-top: 1px solid #737373;
+  border-right: 1px solid #737373;
+  transition: 0.3s;
+}
+
+#sidebar_hidden {
+  visibility: hidden;
+  transform: translateX(-100%);
+}
+
+#sidebar_visible {
+  visibility: visible;
+  transform: translateX(0);
+}
+
+#topSpace,
+#bottomSpace {
+  height: 30px;
+}
+
+#pageTitle {
+  font-size: 23px;
+  font-weight: bold;
+  padding: 0px 16px 0px 16px;
+}
+
+#pageLinks {
+  font-size: 18px;
+  margin-top: 15px;
+}
+
+/* ------------- Scrollbar of the sidebar ------------------ */
+#sidebar_hidden::-webkit-scrollbar,
+#sidebar_visible::-webkit-scrollbar {
+  width: 10px;
+}
+
+#sidebar_hidden::-webkit-scrollbar-track,
+#sidebar_visible::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px white;
+  border-radius: 10px;
+}
+
+#sidebar_hidden::-webkit-scrollbar-thumb,
+#sidebar_visible::-webkit-scrollbar-thumb {
+  background: #cccccc;
+  border-radius: 10px;
+}
